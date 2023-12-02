@@ -1,16 +1,14 @@
-p {
-  margin: 0;
-}
 
-.App {
+.home {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .sidebar {
   text-align: center;
-  width: 16%;
-  min-height: calc(100vh - 64px);
+  width: 200px;
+  height: calc(100vh - 124px);
   padding: 32px;
   border-right: 1px solid black;
   display: flex;
@@ -26,11 +24,12 @@ p {
 }
 
 .drop-area {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
-  width: 84%;
+  flex-grow: 1;
 }
 
 .edit-box {
@@ -42,11 +41,30 @@ p {
 }
 
 .drop-box {
-  min-height: calc(100vh - 232px);
+  height: calc(100vh - 292px);
   width: 100%;
-  /* padding-top: 32px; */
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.drop-area .info {
+  position: absolute;
+  bottom: 240px;
+  left: 8px;
 }

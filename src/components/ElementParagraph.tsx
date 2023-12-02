@@ -1,12 +1,12 @@
 import { memo } from "react";
 
-interface IProps {
+export interface IParagraphProps {
   text?: string;
 }
 
-const ElementParagraph = ({ text }: IProps) => {
+const ElementParagraph = ({ text }: IParagraphProps) => {
   return (
-    <p>{text || 'paragraph'}</p>
+    <p style={{ margin: '8px' }}>{text || 'paragraph'}</p>
   )
 }
 

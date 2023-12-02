@@ -1,19 +1,23 @@
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
 import './App.css';
-import DropArea from './components/DropArea';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Consumer from './consumer';
+import Home from './home';
+import ElementProvider from './contexts/element.context';
 
 function App() {
   return (
-    <div className="App">
-      <DndProvider backend={HTML5Backend}>
-        <Navbar />
-        <Sidebar components={['ElementButton', 'ElementParagraph']} />
-        <DropArea />
-      </DndProvider>
-    </div>
+    <ElementProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/consumer" element={<Consumer />} />
+        </Routes>
+      </BrowserRouter>
+    </ElementProvider>
   );
 }
 

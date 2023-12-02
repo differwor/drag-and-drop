@@ -1,13 +1,13 @@
 import { memo } from "react";
 
-interface IProps {
+export interface IButtonProps {
   label?: string;
   message?: string;
 }
 
-const ElementButton = ({ label, message }: IProps) => {
+const ElementButton = ({ label, message }: IButtonProps) => {
   return (
-    <button onClick={() => alert(message || "Empty!")}>{label || 'Button'}</button>
+    <button style={{ margin: '8px' }} onClick={() => alert(message || "Empty!")}>{label || 'Button'}</button>
   )
 }
 

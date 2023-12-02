@@ -12,15 +12,10 @@ export type TComponent = 'ElementButton' | 'ElementParagraph';
 export const componentArray = [
   {
     component: 'ElementButton',
-    props: {
-      label: "",
-      message: ""
-    }
+    props: {}
   }, 
   {
     component: 'ElementParagraph',
-    props: {
-      text: ""
-    }
+    props: {}
   }
 ];
